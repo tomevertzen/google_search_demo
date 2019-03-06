@@ -2,14 +2,199 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100%;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
 }
 
 /* HEADER *********************************************/
+
+header {
+  min-width: 1100px;
+  height: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.logo {
+  height: 30px;
+  width: 92px;
+  padding-right: 25px;
+  padding-top: 8px;
+}
 
 .searchbar {
   border: 1px solid #dfe1e5;
   background: #fff;
   width: 630px;
-  height: 44px;
+  height: 40px;
   border-radius: 24px;
+  display: flex;
+  align-items: stretch;
+}
+
+.searchtextinput {
+  flex: 1;
+  margin-left: 20px;
+  font-size: 24px;
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.searchbar .mic {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+  align-self: center;
+  padding: 0 8px;
+}
+
+.searchbar .search {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  align-self: center;
+  color: #4285f4;
+  padding-right: 14px;
+}
+
+/* TOOLBAR AT THE END **************************************/
+
+.toolbar {
+  font-family: 'Material Icons';
+  font-size: 24px;
+  display: flex;
+  padding-top: 10px;
+  margin-left: auto;
+}
+
+.toolbar a {
+  color: gray;
+  text-decoration: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.toolbar a:hover {
+  color: black;
+}
+
+.account {
+  height: 30px;
+  width: 30px;
+  padding-right: 20px;
+}
+
+/* NAVIGATION UNDER THE HEADER *****************************************/
+
+nav {
+  width: 100%;
+  height: 38px;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  padding-left: 150px;
+}
+
+.navinner {
+  max-width: 650px;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  align-self: center;
+  font-size: 13px;
+  color: #777;
+}
+
+nav a:hover {
+  color: black;
+}
+
+nav .active {
+  color: #1a73e8;
+  font-weight: bold;
+  border-bottom: 3px solid #1a73e8;
+  line-height: 36px;
+}
+
+/* RESULTS **************************************/
+
+main {
+  position: absolute;
+  left: 174px;
+  width: 630px;
+}
+
+.resulta {
+  color: #808080;
+  font-size: 0.8em;
+}
+
+.resultblock {
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.resultblock a:hover {
+  text-decoration: underline;
+}
+
+.resulturl {
+  padding: 6px 0;
+  display: block;
+  color: #006621;
+  text-decoration: none;
+}
+
+.resulturl:hover {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.resultdesc {
+  color: #545454;
+  font-size: small;
+}
+
+.rellinks {
+  display: flex;
+  max-width: 400px;
+  font-size: 0.9em;
+}
+
+.rellinks a {
+  margin-top: 4px;
+}
+
+.linkcoll {
+  display: flex;
+  flex-direction: column;
+}
+
+.linkcolr {
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FOOTER **********************************/
+
+#footer {
+  width: 100%;
+  height: 50px;
+  background-color: #f2f2f2;
 }
